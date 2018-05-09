@@ -5,8 +5,9 @@
             true,
             "attribute",
             "app",
-            "camelCase"
+            "camelCase",       
         ],
+        "eofline": false,   
         "component-selector": [
             true,
             "element",
