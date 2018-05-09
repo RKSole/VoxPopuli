@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema(
   {
-    critic: { type: Schema.Types.ObjectId, ref: "User" },
+    critic: { type: Schema.Types.ObjectId, ref: "Owner" },
     firm: { type: Schema.Types.ObjectId, ref: "Company" },
-    comments: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+    comments: String,
     punctuation: Number,
     location: { type: { type: String }, coordinates: [Number] }
   },
