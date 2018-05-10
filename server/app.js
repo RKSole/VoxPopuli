@@ -85,8 +85,14 @@ app.use("/", index);
 const authRouter = require("./routes/auth");
 app.use("/api/auth", authRouter);
 
+const Company = require('./models/Company');
+app.use('/api/company', require('./routes/crud')(Company));
+
+const reviewRouter = require("./routes/review");
+app.use('/api', reviewRouter)
 
 app.use(function(req, res) {
+  console.log("DEFAULT")
   res.sendfile(__dirname + '/public/index.html');
 });
 

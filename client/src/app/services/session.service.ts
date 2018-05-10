@@ -20,14 +20,14 @@ export class SessionService {
     return Observable.throw(e.json().message);
   }
 
-  handleUser(user?:object){
+  handleUser(user?: object) {
     this.user = user;
     this.userEvent.emit(this.user);
     return this.user;
   }
 
-  signup(user) {
-    return this.http.post(`${environment.BASEURL}/api/auth/signup`, user, this.options)
+  signup(user,password) {
+    return this.http.post(`${environment.BASEURL}/api/auth/signup`, {user, password}, this.options)
       .map(res => res.json())
       .map(user => this.handleUser(user))
       .catch(this.handleError);
@@ -41,7 +41,7 @@ export class SessionService {
   }
 
   logout() {
-    return this.http.get(`${environment.BASEURL}/api/auth/logout`,this.options)
+    return this.http.get(`${environment.BASEURL}/api/auth/logout`, this.options)
       .map(() => this.handleUser())
       .catch(this.handleError);
   }

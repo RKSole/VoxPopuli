@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const companySchema = new Schema(
   {
     owner: [{ type: Schema.Types.ObjectId, ref: "Owner" }],
-    companyname: String,
+    companyName: String,
     rating: Number,
     comments:[{ type: Schema.Types.ObjectId, ref: "Review" }],
     email: String,
@@ -23,5 +23,5 @@ const companySchema = new Schema(
 )
 
 const Company = mongoose.model("Company", companySchema);
-module.exports = Plan;
+module.exports = Company;
 

@@ -7,7 +7,7 @@ const reviewSchema = new Schema(
     firm: { type: Schema.Types.ObjectId, ref: "Company" },
     comments: String,
     punctuation: Number,
-    location: { type: { type: String }, coordinates: [Number] }
+    location: Number
   },
   {
     timestamps: {
