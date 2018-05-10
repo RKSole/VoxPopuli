@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { SessionService } from '../service/session.service';
+import { Component, OnInit } from "@angular/core";
+import { SessionService } from "../services/session.service";
 
 @Component({
-  selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css']
+  selector: "app-login-form",
+  templateUrl: "./login-form.component.html",
+  styleUrls: ["./login-form.component.css"]
 })
 export class LoginFormComponent implements OnInit {
   username: string;

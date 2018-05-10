@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SessionService } from './service/session.service';
+import { SessionService } from './services/session.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +8,14 @@ import { SessionService } from './service/session.service';
 })
 export class AppComponent {
   title = 'app works!';
-  constructor(public sessionService: SessionService) {
+  constructor(public sessionService:SessionService){
     this.sessionService.userEvent.subscribe( user => {
-      console.log('USER EVENT');
-      if ( user ) {
+      console.log("USER EVENT");
+      if(user){
         this.title = `HOLA ${user.username}`;
-      } else {
-        this.title = 'PLIZ LOGIARSE!';
+      }else{
+        this.title = "PLIZ LOGIARSE!";
       }
-    });
+    })
   }
 }
