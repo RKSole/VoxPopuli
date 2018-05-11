@@ -6,7 +6,6 @@ const companySchema = new Schema(
     owner: [{ type: Schema.Types.ObjectId, ref: "Owner" }],
     companyName: String,
     rating: Number,
-    comments:[{ type: Schema.Types.ObjectId, ref: "Review" }],
     email: String,
     nature:[{type:String, enum:['e-commerce', 'department stores', 'hospitality','large corporations','finance','health centers',
     'educational institutions', 'wellness industry', 'sport facility', 'SMEs', 'government institutions', 'transport system', 'entertainment'],

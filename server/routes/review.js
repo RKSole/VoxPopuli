@@ -41,6 +41,17 @@ router.get('/review/:id', checkIDParam, (req, res) => {
     .catch(e => res.status(500).json({error:e.message}));
 });
 
+router.get('/review/critic/:id', checkIDParam, (req, res) => {
+  Review.find({critic : req.params.id})
+    .then(p => res.status(200).json(p))
+    .catch(e => res.status(500).json({error:e.message}));
+});
+
+router.get('/review/comments/:id', checkIDParam, (req, res) => {
+  Review.find({comments : req.params.id})
+    .then(p => res.status(200).json(p))
+    .catch(e => res.status(500).json({error:e.message}));
+});
 
 
 /* Update a Review. */

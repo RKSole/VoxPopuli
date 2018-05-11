@@ -8,8 +8,7 @@ const userSchema = new Schema(
     rating: Number,
     birthday: Number,
     email: String,
-    owner:[{ type: Schema.Types.ObjectId, ref: "Company" }],
-    comments:[{ type: Schema.Types.ObjectId, ref: "Review" }]
+    owner:[{ type: Schema.Types.ObjectId, ref: "Company" }]
   },
   {
     timestamps: {
