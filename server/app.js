@@ -11,7 +11,7 @@ const path = require("path");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const cors = require('cors');
-
+const passport   = require('passport');
 
 mongoose.Promise = Promise;
 mongoose
@@ -77,7 +77,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
-app.locals.title = "Express - Generated with IronGenerator";
+app.locals.title = "VoxPopuli - Spit it Out";
 
 const index = require("./routes/index");
 app.use("/", index);

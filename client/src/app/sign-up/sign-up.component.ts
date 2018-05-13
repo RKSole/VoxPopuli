@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionService } from "../services/session.service";
+import { SessionService } from '../services/session.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,18 +9,26 @@ import { SessionService } from "../services/session.service";
 })
 export class SignUpComponent implements OnInit {
   username: string;
+  email: string;
   password: string;
+  birthdate: Date;
   error: string;
 
-  constructor(public sessionService: SessionService) {}
+  constructor(public sessionService: SessionService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-    signup() {
-      const user = {
-        username: this.username,
-        password: this.password
-    }
+  signup() {
+    const user = {
+      username: this.username,
+      password: this.password,
+      email: this.email,
+      birthdate: this.birthdate
+    };
+    console.log(user);
+    this.sessionService.signup(this.username, this.password).subscribe(
+      (any) => console.log(user),
+      (err) => this.error = err
+    );
   }
-
 }
