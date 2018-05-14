@@ -1,0 +1,20 @@
+<div *ngIf='company'>
+  <h3>
+  {{company.companyName}}
+</h3>
+<ul class="company-detail">
+      <li> <b>Email:</b> {{company.email}} </li>
+      <hr>
+      <li> <b>Phone:</b> {{company.telephoneNumber}} </li>
+      <hr>
+      <li> <b>Website:</b> {{company.url}} </li>
+      <hr>
+      <li> <b>Nature:</b> {{company.nature}} </li>
+      <hr>
+      <li> <b>Description:</b> {{company.comments}} </li>
+      <hr>
+      <li> <b>Rating:</b> {{company.rating}} </li>
+      <hr>
+      <img src="{{company.image}}" height="100" width="100">
+  </ul>
+</div>

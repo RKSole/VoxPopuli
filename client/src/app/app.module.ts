@@ -10,6 +10,13 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AddCompanyComponent } from './add-company/add-company.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { IndexComponent } from './index/index.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { RouterModule, Routes } from '@angular/router';
+import { routes } from './routes.routing';
+import { ReviewService } from './services/review.service';
+import { CompanyService } from './services/company.service';
+import { ListCompaniesComponent } from './list-companies/list-companies.component';
+
 
 @NgModule({
   declarations: [
@@ -18,14 +25,17 @@ import { IndexComponent } from './index/index.component';
     SignUpComponent,
     AddCompanyComponent,
     UserProfileComponent,
-    IndexComponent
+    IndexComponent,
+    CompanyDetailComponent,
+    ListCompaniesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [SessionService],
+  providers: [SessionService, ReviewService, CompanyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

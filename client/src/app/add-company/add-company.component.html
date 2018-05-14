@@ -1,3 +1,27 @@
-<p>
-  add-company works!
-</p>
+<form (ngSubmit)="addCompany(myForm, select.value)" #myForm="ngForm">
+  <p> Name
+    <input type="text" name="companyName" [(ngModel)]="companyName" required />
+  </p>
+  <p> Email
+    <input type="email" name="email" [(ngModel)]="email" required />
+  </p>
+  <p> Phone
+    <input type="text" name="telephoneNumber" [(ngModel)]="telephoneNumber" required />
+  </p>
+  <select #select>
+    <option *ngFor="let n of nature" [value]="n" required>
+      {{n}}
+    </option>
+  </select>
+  <p> Website
+    <input type="text" name="url" [(ngModel)]="url" required />
+  </p>
+  <p> Description
+    <input type="text" name="comments" [(ngModel)]="comments" required />
+  </p>
+  <input id="imageUpload" type="file" 
+       name="image" [(ngModel)]="image" required capture>
+       <label for="fileupload"> Logo of your company</label>
+       <hr>
+  <button type="submit"> Create Company </button>
+</form>

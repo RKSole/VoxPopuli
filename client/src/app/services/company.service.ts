@@ -17,7 +17,7 @@ export class CompanyService {
   }
   create(company) {
     return this.http
-      .post(`${this.BASEURL}/api/company/`, company)
+      .post(`${this.BASEURL}/api/company`, company)
       .map(res => res.json());
   }
   edit(company) {

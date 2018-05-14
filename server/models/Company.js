@@ -5,12 +5,18 @@ const companySchema = new Schema(
   {
     owner: [{ type: Schema.Types.ObjectId, ref: "Owner" }],
     companyName: String,
-    rating: Number,
+    rating: {
+     type: Number, 
+     default: 0 
+    },
     email: String,
-    nature:[{type:String, enum:['e-commerce', 'department stores', 'hospitality','large corporations','finance','health centers',
-    'educational institutions', 'wellness industry', 'sport facility', 'SMEs', 'government institutions', 'transport system', 'entertainment'],
     image: String,
-    telephoneNumber: Number
+    telephoneNumber:String,
+    url: String,
+    comments: String,
+    nature:[{type:String, enum:['E-commerce', 'Department Stores', 'Hospitality', 'Large Corporations', 'Finance', 'Health Centers',
+    'Educational Institutions', 'Wellness Industry', 'Sport Facility', 'SMEs', 'Government Institutions',
+    'Transport System', 'Entertainment'],
   }]
 },
 {

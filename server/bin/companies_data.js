@@ -5,7 +5,9 @@ module.exports = {
     comments: 'Zara is a Spanish fast fashion (clothing and accessories) retailer based in Arteixo, Galicia (Spain). ',
     email: 'salinas@zara.com',
     nature: 'department stores', 
-    image:url('https://www.foromarketing.com/wp-content/uploads/2016/04/zara.jpg')
+    image:url('https://www.foromarketing.com/wp-content/uploads/2016/04/zara.jpg'),
+    telephoneNumber:6458854845,
+    url: url('www.zara.com')
   },
   {
     owner: 'Javier Salero',
@@ -14,7 +16,9 @@ module.exports = {
     comments: 'It is one of the largest hypermarket chains in the world with 12,300 self-service shops (including 1,528 hypermarkets) at the end of 2016.',
     email: 'salero@carreour.com',
     nature: 'department stores', 
-    image:url('https://www.actuall.com/wp-content/uploads/2017/07/imagencabecera32854_63568949383041-696x696.jpg')
+    image:url('https://www.actuall.com/wp-content/uploads/2017/07/imagencabecera32854_63568949383041-696x696.jpg'),
+    telephoneNumber:645842845,
+    url: url('www.carrefour.com')
   },
   {
     owner: 'Manuel del Pozo',
