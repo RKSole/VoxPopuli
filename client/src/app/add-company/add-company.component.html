@@ -19,9 +19,11 @@
   <p> Description
     <input type="text" name="comments" [(ngModel)]="comments" required />
   </p>
-  <input id="imageUpload" type="file" 
+  <p> Logo <small>(url)</small>
+  <input id="myUrl" type="url" 
        name="image" [(ngModel)]="image" required capture>
-       <label for="fileupload"> Logo of your company</label>
+       <label for="fileupload"></label>
+       </p>
        <hr>
   <button type="submit"> Create Company </button>
 </form>

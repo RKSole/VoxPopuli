@@ -15,6 +15,11 @@ export class CompanyService {
       .get(`${this.BASEURL}/api/company/${id}`)
       .map(res => res.json());
   }
+  getList() {
+    return this.http
+      .get(`${this.BASEURL}/api/company`)
+      .map((res) => res.json());
+  }
   create(company) {
     return this.http
       .post(`${this.BASEURL}/api/company`, company)

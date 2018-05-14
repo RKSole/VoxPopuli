@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { CompanyService } from '../services/company.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CompanyDetailComponent } from '../company-detail/company-detail.component';
 
 @Component({
   selector: 'app-list-companies',
@@ -6,10 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-companies.component.css']
 })
 export class ListCompaniesComponent implements OnInit {
+  company$: Observable<any>;
+  company: Array<any> = [];
+  public router: Router;
 
-  constructor() { }
+  constructor(companyService: CompanyService) {
+    this.company$ = companyService.getList();
+    companyService.getList().subscribe( company => this.company = company);
+   }
 
   ngOnInit() {
   }
 
 }
+
+
+
+ 
+
