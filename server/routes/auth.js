@@ -14,9 +14,9 @@ const logInPromise = (user, req) => new Promise((resolve,reject) => {
 
 /* GET home page */
 router.post('/signup', (req, res, next) => {
-    const {username, password, birthdate, email} = req.body;
+    const {username, password, birthdate, email, profilePic, reviewCreated} = req.body;
   
-    if (!username || !password || !email || !birthdate) {
+    if (!username || !password || !email || !birthdate || !profilePic) {
       res.status(400).json({ message: 'fill all fields' });
       return;
     }
@@ -31,7 +31,9 @@ router.post('/signup', (req, res, next) => {
         const theUser = new User({
           username,
           birthdate,
-          password: hashPass
+          password: hashPass,
+          email,
+          profilePic,
         });
     
         return theUser.save().then( user => logInPromise(user,req));

@@ -14,10 +14,9 @@ const userSchema = new Schema(
     email: {
       type: String,
     },
+    profilePic: String,
     owner: [{ type: Schema.Types.ObjectId, ref: "Company" }],
     reviewsCreated: { type: Number, default: 0 },
-    reviewsAssisted: { type: Number, default: 0 },
-    profilePic: String
   },
   {
     timestamps: {

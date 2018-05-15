@@ -10,6 +10,11 @@
     <br>
     <label for="date">Birthdate</label>
     <input id="date" type="date" name="birthdate" [(ngModel)]="birthdate">
+    <p> Picture <small>(url)</small>
+      <input id="myUrl" type="url" 
+           name="profilePic" [(ngModel)]="profilePic">
+           <label for="fileupload"></label>
+           </p>
     <div>
       <button (click)="signup()"> Subscribe me!
       </button>
