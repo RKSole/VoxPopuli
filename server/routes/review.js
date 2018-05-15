@@ -32,7 +32,7 @@ router.post('/review', (req, res, next) => {
       message: 'New Review Created!',
       Review: p
     }))
-    .catch(e => res.status(500).json({ error: e.message }));
+    .catch(e => res.status(500).json(console.log(e)));
 });
 
 /* GET a single Review. */
@@ -49,7 +49,7 @@ router.get('/review/critic/:id', checkIDParam, (req, res) => {
 });
 
 router.get('/review/comments/:id', checkIDParam, (req, res) => {
-  Review.find({comments : req.params.id})
+  Review.find({firm : req.params.id})
     .then(p => res.status(200).json(p))
     .catch(e => res.status(500).json({error:e.message}));
 });

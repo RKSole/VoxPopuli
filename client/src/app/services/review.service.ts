@@ -17,8 +17,9 @@ export class ReviewService {
       .map(res => res.json());
   }
   getReviewCompanies(companyId) {
+    console.log(companyId)
     return this.http
-      .get(`${this.BASEURL}/api/review/company/${companyId}`)
+      .get(`${this.BASEURL}/api/review/comments/${companyId}`)
       .map(res => res.json());
   }
   create(review) {

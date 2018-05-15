@@ -3,6 +3,8 @@ import { CompanyService } from '../services/company.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SessionService } from '../services/session.service';
 import { AddCompanyComponent } from '../add-company/add-company.component';
+import { ReviewService } from '../services/review.service';
+
 
 @Component({
   selector: 'app-company-detail',
@@ -11,10 +13,13 @@ import { AddCompanyComponent } from '../add-company/add-company.component';
 })
 export class CompanyDetailComponent implements OnInit {
   company;
-  user;
+  user:any;
+  review:any;
+
   constructor(
+    private ReviewService: ReviewService,
     private CompanyService: CompanyService,
-    route: ActivatedRoute,
+    private route: ActivatedRoute,
     public router: Router,
     private sessionService: SessionService,
   ) {
@@ -22,12 +27,20 @@ export class CompanyDetailComponent implements OnInit {
       CompanyService.get(params.id).subscribe(company => {
         this.company = company;
         console.log(this.company);
-        this.refreshCompany();
+        this.ReviewService.getReviewCompanies(params.id).subscribe(review => {
+          this.review = review
+          console.log(this.review)
+        })
       });
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+      this.sessionService.isLoggedIn().subscribe(user => {
+        this.user = user
+        console.log(this.user)
+      })
+   }
 
   refreshCompany() {
     this.CompanyService
@@ -35,4 +48,24 @@ export class CompanyDetailComponent implements OnInit {
       .subscribe(company => (this.company = company));
   }
 
+  newReview(myForm) {
+    const review = {
+      critic: this.user._id,
+      firm: this.company._id,
+      comments: myForm.value.comments,
+      punctuation: myForm.value.punctuation,
+    };
+    console.log("PARA PROBAR QUE LOS DATOS ESTA OK", review)
+
+    this.ReviewService.create(review).subscribe();
+    this.route.params.subscribe(params => {
+    this.review = params['id'];
+    });
+
+  //   refreshReview() {
+  //     this.ReviewService
+  //       .get(this.review._id)
+  //       .subscribe(review => (this.review = review));
+  // }
+  }
 }

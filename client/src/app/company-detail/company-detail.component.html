@@ -18,3 +18,15 @@
       <img src="{{company.image}}" height="100" width="100">
   </ul>
 </div>
+<hr>
+<form (ngSubmit)="newReview(myForm)" #myForm="ngForm">
+    <!-- <img src="{{sessionService.user.profilePic}}" height="100" width="100"> -->
+    <p> comments
+      <input type="text" name="comments" [(ngModel)]="comments" required />
+    </p>
+    <p> punctuation
+      <input type="number" max="5" min="0" name="punctuation" [(ngModel)]="punctuation" required />
+    </p>
+         <hr>
+    <button type="submit"> Create Review </button>
+  </form>

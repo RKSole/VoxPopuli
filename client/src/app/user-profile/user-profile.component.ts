@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SessionService } from '../services/session.service';
 import { ReviewService } from '../services/review.service';
 import { CompanyService } from '../services/company.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -12,6 +13,7 @@ export class UserProfileComponent implements OnInit {
   review: Array<any>;
   critic: Array<any>;
   firm: Array<any>;
+
   constructor(
     private sessionService: SessionService,
     private reviewService: ReviewService,
@@ -20,11 +22,4 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() { }
 
-  updateProfile() {
-    const profile = {
-      critic: this.sessionService.user,
-      firm: this.companyService.company,
-      review: this.reviewService.review
-    };
-  }
 }

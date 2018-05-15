@@ -1,3 +1,19 @@
-<p>
-  user-profile works!
-</p>
+
+<div class="main" *ngIf="sessionService.user">
+  <div class="header">
+    <h3>Username: {{sessionService.user.username}}</h3>
+    <h5>Birthday: {{sessionService.user.birthdate}}</h5>
+  </div>
+  <div class="wrapper">
+    <p>Email:
+      <span>{{sessionService.user.email}} </span>
+    </p>
+    
+        <img src="{{sessionService.user.profilePic}}" height="100" width="100">
+    <p>Reviews Created:
+        <span>{{sessionService.user.reviewsCreated}}</span>
+    </p>
+    <a class="btn btn-warning" [routerLink]="['**']">Home </a>     
+    <a class="btn btn-warning" [routerLink]="[]">Update </a>
+  </div>
+</div>
