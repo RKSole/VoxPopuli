@@ -11,6 +11,7 @@ export const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'login', component: LoginFormComponent},
   { path: 'signup', component: SignUpComponent},
+  { path: 'profile/:id', component: UserProfileComponent},
   { path: 'profile', component: UserProfileComponent},
   { path: 'company', component: AddCompanyComponent},
   { path: 'companyDetail/:id', component: CompanyDetailComponent},

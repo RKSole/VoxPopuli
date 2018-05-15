@@ -13,13 +13,26 @@ export class UserProfileComponent implements OnInit {
   review: Array<any>;
   critic: Array<any>;
   firm: Array<any>;
+  user: any;
+  company: any;
 
   constructor(
     private sessionService: SessionService,
     private reviewService: ReviewService,
-    private companyService: CompanyService
-  ) { }
+    private companyService: CompanyService,
+    private route: ActivatedRoute,
+    public router: Router,
+  ) {
+}
 
-  ngOnInit() { }
-
+  ngOnInit() {
+    this.sessionService.isLoggedIn().subscribe(user => {
+      this.user = user;
+      console.log(this.user);
+      this.reviewService.getReviewCritic(this.user._id).subscribe(review => {
+        this.review = review;
+        console.log(this.review);
+      });
+    });
+}
 }

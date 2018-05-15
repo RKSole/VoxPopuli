@@ -17,10 +17,22 @@ export class ReviewService {
       .map(res => res.json());
   }
   getReviewCompanies(companyId) {
-    console.log(companyId)
+    console.log(companyId);
     return this.http
       .get(`${this.BASEURL}/api/review/comments/${companyId}`)
       .map(res => res.json());
+  }
+
+  getReviewCritic(userID) {
+    console.log(userID);
+    return this.http
+      .get(`${this.BASEURL}/api/review/critic/${userID}`)
+      .map(res => res.json());
+  }
+  getList() {
+    return this.http
+      .get(`${this.BASEURL}/api/review`)
+      .map((res) => res.json());
   }
   create(review) {
     return this.http

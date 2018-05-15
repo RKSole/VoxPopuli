@@ -13,8 +13,11 @@ import { ReviewService } from '../services/review.service';
 })
 export class CompanyDetailComponent implements OnInit {
   company;
-  user:any;
-  review:any;
+  user: any;
+  review: any;
+  comments: any;
+  punctuation: any;
+  error:any;
 
   constructor(
     private ReviewService: ReviewService,
@@ -28,19 +31,24 @@ export class CompanyDetailComponent implements OnInit {
         this.company = company;
         console.log(this.company);
         this.ReviewService.getReviewCompanies(params.id).subscribe(review => {
-          this.review = review
-          console.log(this.review)
-        })
+          this.review = review;
+          console.log(this.review);
+        });
       });
     });
+    // route.params.subscribe(params =>{
+    //   ReviewService.get(params.id).subscribe(review => {
+    //     this.review = review;
+    //   })
+    // })
   }
 
   ngOnInit() {
-      this.sessionService.isLoggedIn().subscribe(user => {
-        this.user = user
-        console.log(this.user)
-      })
-   }
+    this.sessionService.isLoggedIn().subscribe(user => {
+      this.user = user;
+      console.log(this.user);
+    });
+  }
 
   refreshCompany() {
     this.CompanyService
@@ -55,17 +63,20 @@ export class CompanyDetailComponent implements OnInit {
       comments: myForm.value.comments,
       punctuation: myForm.value.punctuation,
     };
-    console.log("PARA PROBAR QUE LOS DATOS ESTA OK", review)
+    console.log('PARA PROBAR QUE LOS DATOS ESTA OK', review);
 
-    this.ReviewService.create(review).subscribe();
-    this.route.params.subscribe(params => {
-    this.review = params['id'];
-    });
+    this.ReviewService.create(review).subscribe(() => {
+      this.review.push(review);
+      this.comments = '';
+      this.punctuation = '';
+       })
 
-  //   refreshReview() {
-  //     this.ReviewService
-  //       .get(this.review._id)
-  //       .subscribe(review => (this.review = review));
-  // }
+
+
+    //   refreshReview() {
+    //     this.ReviewService
+    //       .get(this.review._id)
+    //       .subscribe(review => (this.review = review));
+    // }
   }
 }

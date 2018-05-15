@@ -23,8 +23,16 @@ router.get('/review', (req, res, next) => {
 /* CREATE a new Review */
 router.post('/review', (req, res, next) => {
   const { critic, firm, comments, punctuation, location } = req.body;
+  if (!comments  || !punctuation) {
+    res.status(400).json({ message: 'fill all fields' });
+    return;
+  }
   const theReview = new Review({
-    critic, firm, comments, punctuation, location
+    critic,
+    firm,
+    comments,
+    punctuation,
+    location
   });
 
   theReview.save()
@@ -39,44 +47,44 @@ router.post('/review', (req, res, next) => {
 router.get('/review/:id', checkIDParam, (req, res) => {
   Review.findById(req.params.id)
     .then(p => res.status(200).json(p))
-    .catch(e => res.status(500).json({error:e.message}));
+    .catch(e => res.status(500).json({ error: e.message }));
 });
 
 router.get('/review/critic/:id', checkIDParam, (req, res) => {
-  Review.find({critic : req.params.id})
+  Review.find({ critic: req.params.id })
     .then(p => res.status(200).json(p))
-    .catch(e => res.status(500).json({error:e.message}));
+    .catch(e => res.status(500).json({ error: e.message }));
 });
 
 router.get('/review/comments/:id', checkIDParam, (req, res) => {
-  Review.find({firm : req.params.id})
+  Review.find({ firm: req.params.id })
     .then(p => res.status(200).json(p))
-    .catch(e => res.status(500).json({error:e.message}));
+    .catch(e => res.status(500).json({ error: e.message }));
 });
 
 
 /* Update a Review. */
 router.put('/review/:id', checkIDParam, (req, res) => {
-  const {critic, firm, comments, punctuation, location} = req.body;
-  const updates = {critic, firm, comments, punctuation, location};
+  const { critic, firm, comments, punctuation, location } = req.body;
+  const updates = { critic, firm, comments, punctuation, location };
 
-  Review.findByIdAndUpdate(req.params.id, updates, {new:true})
+  Review.findByIdAndUpdate(req.params.id, updates, { new: true })
     .then(p => res.status(200).json(p))
-    .catch(e => res.status(500).json({error:e.message}));
+    .catch(e => res.status(500).json({ error: e.message }));
 });
 
-router.delete('/review/:id',checkIDParam, (req, res) => {
+router.delete('/review/:id', checkIDParam, (req, res) => {
   Review.findByIdAndRemove(req.params.id)
-      .then(p => res.status(200).json(p))
-      .catch(e => res.status(500).json({error:e.message}));
+    .then(p => res.status(200).json(p))
+    .catch(e => res.status(500).json({ error: e.message }));
 });
 
 /* Delete a Review. */
 router.post("/:id/delete", (req, res) => {
   Review.findByIdAndRemove(req.params.id)
-     .then(p => res.status(200).json(p))
+    .then(p => res.status(200).json(p))
 
-    .catch(e => res.status(500).json({error:e.message})); 
-  })
+    .catch(e => res.status(500).json({ error: e.message }));
+})
 
 module.exports = router;

@@ -5,8 +5,14 @@ const reviewSchema = new Schema(
   {
     critic: { type: Schema.Types.ObjectId, ref: "Owner" },
     firm: { type: Schema.Types.ObjectId, ref: "Company" },
-    comments: String,
-    punctuation: Number,
+    comments: {
+      type:String,
+      required: true
+    },
+    punctuation: {
+      type:Number,
+      required: true,
+    },
     location: Number
   },
   {

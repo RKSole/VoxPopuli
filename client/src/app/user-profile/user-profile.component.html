@@ -17,3 +17,10 @@
     <a class="btn btn-warning" [routerLink]="[]">Update </a>
   </div>
 </div>
+<div>
+    <div class="review" *ngFor="let r of review">
+      <p>  {{ r.comments }} </p>
+      <p>  {{ r.punctuation }} </p>
+      <hr>
+    </div>
+  </div>
