@@ -14,10 +14,10 @@ const logInPromise = (user, req) => new Promise((resolve,reject) => {
 
 /* GET home page */
 router.post('/signup', (req, res, next) => {
-    const {username, password, birthday} = req.body;
+    const {username, password, birthdate, email} = req.body;
   
-    if (!username || !password) {
-      res.status(400).json({ message: 'Provide username and password' });
+    if (!username || !password || !email || !birthdate) {
+      res.status(400).json({ message: 'fill all fields' });
       return;
     }
   
@@ -30,7 +30,7 @@ router.post('/signup', (req, res, next) => {
 
         const theUser = new User({
           username,
-          birthday,
+          birthdate,
           password: hashPass
         });
     

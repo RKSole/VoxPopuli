@@ -12,12 +12,12 @@ export class LoginFormComponent implements OnInit {
   password: string;
   error: string;
 
-  constructor(public sessionService: SessionService) { }
+  constructor(private sessionService: SessionService, private router: Router) { }
 
   ngOnInit() { }
 
   login() {
-    console.log(this.username, this.password);
-    this.sessionService.login(this.username, this.password).subscribe();
+    const user = {username: this.username, password: this.password};
+    this.sessionService.login(user).subscribe((() => this.router.navigate(['/profile'])));
   }
 }

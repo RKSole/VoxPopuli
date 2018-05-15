@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment';
 
 @Injectable()
 export class SessionService {
+
   user: any;
   userEvent: EventEmitter<any> = new EventEmitter();
   options: any = { withCredentials: true };
@@ -25,16 +26,16 @@ export class SessionService {
     return this.user;
   }
 
-  signup(user, password) {
-    return this.http.post(`${environment.BASEURL}/api/auth/signup`, { user, password }, this.options)
+  signup(user) {
+    return this.http.post(`${environment.BASEURL}/api/auth/signup`, user, this.options)
       .map(res => res.json())
-      .map(user => this.handleUser(user))
+      .map(any => this.handleUser(user))
       .catch(this.handleError);
   }
 
-  login(username, password) {
+  login(user) {
     return this.http
-      .post(`${environment.BASEURL}/api/auth/login`, { username, password }, this.options)
+      .post(`${environment.BASEURL}/api/auth/login`, user, this.options)
       .map(res => res.json())
       .map(user => this.handleUser(user))
       .catch(this.handleError);

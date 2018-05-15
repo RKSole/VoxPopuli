@@ -14,21 +14,12 @@ export class SignUpComponent implements OnInit {
   birthdate: Date;
   error: string;
 
-  constructor(public sessionService: SessionService) { }
+  constructor(private sessionService: SessionService, private router: Router) { }
 
   ngOnInit() { }
 
   signup() {
-    const user = {
-      username: this.username,
-      password: this.password,
-      email: this.email,
-      birthdate: this.birthdate
-    };
-    console.log(user);
-    this.sessionService.signup(this.username, this.password).subscribe(
-      (any) => console.log(user),
-      (err) => this.error = err
-    );
+    const user = {username: this.username, password: this.password, birthdate: this.birthdate, email: this.email};
+    this.sessionService.signup(user).subscribe((() => this.router.navigate(['/login'])));
   }
 }

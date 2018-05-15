@@ -27,7 +27,9 @@ module.exports = {
     comments: 'El Corte Inglés S.A., headquartered in Madrid, is the biggest department store group in Europe and ranks fourth worldwide.',
     email: 'pozo@eci.com',
     nature: 'department stores',
-    image:url('https://cdn.elgrupoinformatico.com/img/w720/Noticias/2016/01/el-corte-ingles-logo-220116.jpg')
+    image:url('https://cdn.elgrupoinformatico.com/img/w720/Noticias/2016/01/el-corte-ingles-logo-220116.jpg'),
+    telephoneNumber:647852545,
+    url: url('https://www.elcorteingles.es/')
   },
   {
     owner: 'Francisco Camacho',
@@ -36,7 +38,9 @@ module.exports = {
     comments: 'The Kinepolis Group is a Belgian cinema chain formed in 1997 as a result of the merger of two family cinema groups, Bert and Claeys, and has been listed on the stock exchange since 1998.',
     email: 'camacho@kine.com',
     nature: 'entertainment',
-    image:url('https://www.granadaon.com/wp-content/uploads/2017/04/kinepolis-cines-granada-1-1.jpg')
+    image:url('https://www.granadaon.com/wp-content/uploads/2017/04/kinepolis-cines-granada-1-1.jpg'),
+    telephoneNumber:665849745,
+    url: url('https://kinepolis.es/')
   },
   {
     owner: 'Gloria García',
@@ -45,7 +49,9 @@ module.exports = {
     comments: 'Gregorio Marañón Hospital is a Spanish health institution located as one of the most advanced public health centers.',
     email: 'garcia@HG.com',
     nature: 'health centers',
-    image:url('http://farmacovigilancia.tv/blog/wp-content/uploads/2010/05/SALUD_MADRID.jpg')
+    image:url('http://farmacovigilancia.tv/blog/wp-content/uploads/2010/05/SALUD_MADRID.jpg'),
+    telephoneNumber:697542345,
+    url: url('http://www.madrid.org/cs/Satellite?pagename=HospitalGregorioMaranon/Page/HGMA_home')
   },
   {
     owner: 'Susana Vadillo',
@@ -54,7 +60,9 @@ module.exports = {
     comments: 'GAME is a british company dedicated to the sale, rental and loans of video games',
     email: 'Vadillo@Game.com',
     nature: 'department stores',
-    image:url('http://www.nintenderos.com/wp-content/uploads/2015/10/GAME-logotipo.jpg')
+    image:url('http://www.nintenderos.com/wp-content/uploads/2015/10/GAME-logotipo.jpg'),
+    telephoneNumber:687955485,
+    url: url('https://www.game.es/')
   },
   {
     owner: 'Giorgio',
@@ -63,7 +71,9 @@ module.exports = {
     comments: 'Goiko Grill was born in a small space with room for only 30 seats. It was a dream of Andoni’s, a medical doctor who originally came from Caracas to work as a resident medical officer at Hospital de La Paz, but ended up ditching the white robe for the apron.',
     email: 'Girodio@Goiko.com',
     nature: 'hospitality',
-    image:url('http://www.negociofranquicia.es/wordpress/wp-content/uploads/2017/05/goiko-grill-negocio-franquicia.jpg')
+    image:url('http://www.negociofranquicia.es/wordpress/wp-content/uploads/2017/05/goiko-grill-negocio-franquicia.jpg'),
+    telephoneNumber:699754265,
+    url: url('https://www.goikogrill.com/')
   },
   {
     owner: 'Marc Pomar',
@@ -72,7 +82,9 @@ module.exports = {
     comments: 'The UCM is a university with a long history and broad social recognition, located in Madrid.',
     email: 'Pomar@ucm.com',
     nature: 'educational institutions',
-    image:url('https://www.ucm.es/data/cont/media/www/3/Marca%20UCM%20logo%20negro.jpg')
+    image:url('https://www.ucm.es/data/cont/media/www/3/Marca%20UCM%20logo%20negro.jpg'),
+    telephoneNumber:615785265,
+    url: url('https://www.ucm.es/')
   },
   {
     owner: 'Victor Rodriguez',
@@ -81,7 +93,9 @@ module.exports = {
     comments: 'Preparing the next generation of digital creators',
     email: 'Rodriguez@IM.com',
     nature: 'educational institutions',
-    image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8sYw01BogzH18tKo0fclwyKda9flRGD02yhVdyGjRKqaMf5LCCg')
+    image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8sYw01BogzH18tKo0fclwyKda9flRGD02yhVdyGjRKqaMf5LCCg'),
+    telephoneNumber:684552445,
+    url: url('http://www.ironhack.com/en')
   },
   {
     owner: 'Beltran S.',
@@ -90,7 +104,9 @@ module.exports = {
     comments: 'MANGO was founded in 1984 and is today one of the leading fashion groups in the world.Based in its city of origin, Barcelona',
     email: 's@mango.com',
     nature: 'department stores',
-    image:url('https://ballzbeatz.com/wp-content/uploads/2018/01/Mango-Logo-Decal-Sticker.jpg')
+    image:url('https://ballzbeatz.com/wp-content/uploads/2018/01/Mango-Logo-Decal-Sticker.jpg'),
+    telephoneNumber:688413666,
+    url: url('https://shop.mango.com/es')
   },
   {
     owner: 'Claudia Losada',
@@ -99,7 +115,9 @@ module.exports = {
     comments: 'Spanish Embassy in London was created long time ago to help every spanish around this amazing city',
     email: 'losada@Se.com',
     nature: 'government institutions',
-    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Escudo_de_Espa%C3%B1a_%28mazonado%29.svg/200px-Escudo_de_Espa%C3%B1a_%28mazonado%29.svg.png')
+    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Escudo_de_Espa%C3%B1a_%28mazonado%29.svg/200px-Escudo_de_Espa%C3%B1a_%28mazonado%29.svg.png'),
+    telephoneNumber:687469523,
+    url: url('http://www.exteriores.gob.es/Portal/es/ServiciosAlCiudadano/Paginas/EmbajadasConsulados.aspx')
   },
   {
     owner: 'Antonella',
@@ -108,7 +126,9 @@ module.exports = {
     comments: 'A parador in Spain and other Spanish-speaking countries, is a kind of luxury hotel, usually located in a converted historic building such as a monastery or castle. Parar means to stop, halt or stay. Contents.',
     email: 'anto@parador.com',
     nature: 'hospitality',
-    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Logotipo_Paradores.jpg/1200px-Logotipo_Paradores.jpg')
+    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Logotipo_Paradores.jpg/1200px-Logotipo_Paradores.jpg'),
+    telephoneNumber:684548164,
+    url: url('http://www.parador.es/es/paradores/parador-de-alcala-de-henares')
   },
   {
     owner: 'Carlos Fernandez',
@@ -117,7 +137,9 @@ module.exports = {
     comments: 'Eurostars Hotels is a hotel chain belonging to the Hotusa Group with a portfolio of 75 establishments distributed in 14 European and American destinations',
     email: 'fernandez@euro.com',
     nature: 'hospitality',
-    image:url('https://pbs.twimg.com/profile_images/793746608118726656/feMNEUt0_400x400.jpg')
+    image:url('https://pbs.twimg.com/profile_images/793746608118726656/feMNEUt0_400x400.jpg'),
+    telephoneNumber:644235684,
+    url: url('https://www.eurostarshotels.com/')
   },
   {
     owner: 'Miriam Lozano',
@@ -126,7 +148,9 @@ module.exports = {
     comments: 'The Casino Gran Madrid is a gambling casino located at kilometer 29 of the A-6, in the municipality of Torrelodones Spain, in the area known as Los Llanos. It is the first casino in Spain obout number of visits.',
     email: 'lozano@casino.com',
     nature: 'entertainment',
-    image:url('https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/spots/high/1501171297.jpg')
+    image:url('https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/spots/high/1501171297.jpg'),
+    telephoneNumber:6847595712,
+    url: url('https://www.casinogranmadrid.es/')
   },
   {
     owner: 'Isabel Carrascosa',
@@ -135,7 +159,10 @@ module.exports = {
     comments: "The Mayorazgo hotel is a 4 star hotel very close to Madrid's Gran Vía and Plaza de España, which makes it an option for the commercial and business traveler",
     email: 'carras@mayor.com',
     nature: 'hospitality',
-    image:url('http://www.hotelbooqi.com/wp-content/uploads/2017/08/Mayorazgo.png')
+    image:url('http://www.hotelbooqi.com/wp-content/uploads/2017/08/Mayorazgo.png'),
+    telephoneNumber:668474356,
+    url: url('http://www.hotelmayorazgo.com/')
+
   },
   {
     owner: 'Francisco Llanos',
@@ -144,7 +171,9 @@ module.exports = {
     comments: 'Stadium of Atlético de Madrid FC',
     email: 'llanos@atletico.com',
     nature: 'sport facility',
-    image:url('https://images-na.ssl-images-amazon.com/images/I/714hhiMYyzL._SX425_.jpg')
+    image:url('https://images-na.ssl-images-amazon.com/images/I/714hhiMYyzL._SX425_.jpg'),
+    telephoneNumber:631254897,
+    url: url('http://www.atleticodemadrid.com/')
   },
   {
     owner: 'Fermin del Prado',
@@ -153,7 +182,9 @@ module.exports = {
     comments: 'Stadium of Real Madrid FC',
     email: 'prado@bernabeu.com',
     nature: 'sport facility',
-    image:url('https://pbs.twimg.com/profile_images/855073776215654400/oGEOJ2JU.jpg')
+    image:url('https://pbs.twimg.com/profile_images/855073776215654400/oGEOJ2JU.jpg'),
+    telephoneNumber:613634113,
+    url: url('https://www.realmadrid.com/en')
   },
   {
     owner: 'Michael Lans',
@@ -162,7 +193,10 @@ module.exports = {
     comments: 'Amazon is an American electronic commerce and cloud computing company based in Seattle, Washington that was founded by Jeff Bezos on July 5, 1994.',
     email: 'lans@amazon.com',
     nature: 'e-commerce',
-    image:url('http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500.png')
+    image:url('http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500.png'),
+    image:url('https://pbs.twimg.com/profile_images/855073776215654400/oGEOJ2JU.jpg'),
+    telephoneNumber:612548796,
+    url: url('https://www.amazon.es/')
   },
   {
     owner: 'Kevin Ranth',
@@ -171,7 +205,9 @@ module.exports = {
     comments: 'Google Inc., American search engine company, founded in 1998 by Sergey Brin and Larry Page that is a subsidiary of the holding company Alphabet Inc.',
     email: 'ranth@google.com',
     nature: 'e-commerce',
-    image:url('http://jessiecervantes.com/wp-content/uploads/2018/04/Google.jpg ')
+    image:url('http://jessiecervantes.com/wp-content/uploads/2018/04/Google.jpg'),
+    telephoneNumber:666758496,
+    url: url('https://www.google.es/')
   },
   {
     owner: 'Tomás Gonzalez',
@@ -180,7 +216,9 @@ module.exports = {
     comments: 'electronic commerce dedicated to sale informatical hardware',
     email: 'gonza@pcomp.com',
     nature: 'e-commerce',
-    image:url('https://3.bp.blogspot.com/-qxm_6NjgHJs/UXUJ7aThRgI/AAAAAAAAABU/crV5eJUczf8/s1600/PcComponentes.gif')
+    image:url('https://3.bp.blogspot.com/-qxm_6NjgHJs/UXUJ7aThRgI/AAAAAAAAABU/crV5eJUczf8/s1600/PcComponentes.gif'),
+    telephoneNumber:695748623,
+    url: url('https://www.pccomponentes.com/')
   },
   {
     owner: 'Huei Lin',
@@ -189,7 +227,9 @@ module.exports = {
     comments: 'Alibaba Group Holding Limited, incorporated on June 28, 1999, is a holding company. Through its subsidiaries, the Company is principally engaged in online and mobile commerce',
     email: 'lin@ali.com',
     nature: 'e-commerce',
-    image:url('http://ticker.tv/news/wp-content/uploads/2018/01/BABA.png')
+    image:url('http://ticker.tv/news/wp-content/uploads/2018/01/BABA.png'),
+    telephoneNumber:646748866,
+    url: url('https://www.pccomponentes.com/')
   },
   {
     owner: 'Javier Rodrigo',
@@ -198,7 +238,9 @@ module.exports = {
     comments: 'The best bowling around city',
     email: 'rodri@bowl.com',
     nature: 'entertainment',
-    image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnC7nMAObpKFBHk9Prbwm7Zm4UeRlh_uNjlAPOExdM8fQw3Kn')
+    image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnC7nMAObpKFBHk9Prbwm7Zm4UeRlh_uNjlAPOExdM8fQw3Kn'),
+    telephoneNumber:643687313,
+    url: url('http://www.bowlingchamartin.com/bolera/')
   },
   {
     owner: 'Abdallah Aberouch',
@@ -207,7 +249,9 @@ module.exports = {
     comments: 'BBVA is a multinational Spanish banking group. It was formed from a merger of Banco Bilbao Vizcaya and Argentaria in 1999, and is the second largest bank in Spain.',
     email: 'abe@bbva.com',
     nature: 'finance',
-    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Logotipo_de_BBVA.svg/1280px-Logotipo_de_BBVA.svg.png')
+    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Logotipo_de_BBVA.svg/1280px-Logotipo_de_BBVA.svg.png'),
+    telephoneNumber:695845245,
+    url: url('https://www.bbva.es/particulares/index.jsp')
   },
   {
     owner: 'Jaime risueña',
@@ -216,7 +260,9 @@ module.exports = {
     comments: "world's bullfight temple",
     email: 'risu@ventas.com',
     nature: 'entertainment',
-    image:url('http://www.abc.es/media/cultura/2017/06/22/plaza%20ventas-kKa--620x349@abc.jpg')
+    image:url('http://www.abc.es/media/cultura/2017/06/22/plaza%20ventas-kKa--620x349@abc.jpg'),
+    telephoneNumber:745896254,
+    url: url('http://www.las-ventas.com/')
   },
   {
     owner: 'Frank Warthbenger',
@@ -225,7 +271,9 @@ module.exports = {
     comments: 'The most famous electronic music festival',
     email: 'wart@tomo.com',
     nature: 'entertainment',
-    image:url('http://www.tomorrowland.com/global/img/og.jpg')
+    image:url('http://www.tomorrowland.com/global/img/og.jpg'),
+    telephoneNumber:658494949,
+    url: url('https://www.tomorrowland.com/en/festival/welcome')
   },
   {
     owner: 'Oscar Millan',
@@ -234,7 +282,9 @@ module.exports = {
     comments: 'mucis festival based in Madrid',
     email: 'millan@rio.com',
     nature: 'entertainment',
-    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Rock_in_Rio_-_Madrid_2012.jpg/1200px-Rock_in_Rio_-_Madrid_2012.jpg')
+    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Rock_in_Rio_-_Madrid_2012.jpg/1200px-Rock_in_Rio_-_Madrid_2012.jpg'),
+    telephoneNumber:785946521,
+    url: url('https://www.wegow.com/festivales/festival-rio-babel-2018/')
   },
   {
     owner: 'Fernando Meyado',
@@ -243,7 +293,9 @@ module.exports = {
     comments: 'Located on the banks of the Manzanares River, the Riviera room has offered more than half a century to the locals an offer of shows hardly comparable to that of other venues in the capital. With an area of ​​1,500 square meters and a capacity of 2,500 spectators',
     email: 'meya@riviera.com',
     nature: 'entertainment',
-    image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCpZ_DsXI2ZfYHdZdweDcPW5JiAQthBr5Q6WlRFxY2OcqCcJj7A')
+    image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCpZ_DsXI2ZfYHdZdweDcPW5JiAQthBr5Q6WlRFxY2OcqCcJj7A'),
+    telephoneNumber:644438434,
+    url: url('http://salariviera.com/')
   },
   {
     owner: 'Lorena Campos',
@@ -252,7 +304,9 @@ module.exports = {
     comments: "underground's network of the Spanish capital",
     email: 'campos@mdm.com',
     nature: 'transport system',
-    image:url('http://entreparentesis.org/wp-content/uploads/FOTO-Metro-Madrid.png')
+    image:url('http://entreparentesis.org/wp-content/uploads/FOTO-Metro-Madrid.png'),
+    telephoneNumber:666876354,
+    url: url('https://www.metromadrid.es/es/index.html')
   },
   {
     owner: 'Esther yoyo',
@@ -261,7 +315,9 @@ module.exports = {
     comments: "buse's network of the Spanish capital",
     email: 'yoyo@bus.com',
     nature: 'transport system',
-    image:url('http://www.iconmm.com/wp-content/uploads/2017/10/transit_emt.jpg')
+    image:url('http://www.iconmm.com/wp-content/uploads/2017/10/transit_emt.jpg'),
+    telephoneNumber:785466425,
+    url: url('http://www.emtmadrid.es/Home')
   },
   {
     owner: 'Penelope Marco',
@@ -270,7 +326,9 @@ module.exports = {
     comments: 'Lidl Stiftung & Co. KG, better known by its trademark Lidl, is a German discount supermarket chain',
     email: 'Marco@lidl.com',
     nature: 'department stores',
-    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/200px-Lidl-Logo.svg.png')
+    image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/200px-Lidl-Logo.svg.png'),
+    telephoneNumber:646468322,
+    url: url('https://www.lidl.es/es/index.htm')
   },
   {
     owner: 'Manolo Pedroño',
@@ -279,7 +337,9 @@ module.exports = {
     comments: 'This Spa is a hymn to nature, intriguing to the senses yet calming to the mind.',
     email: 'pedro@Spa.com',
     nature: 'wellness industry',
-    image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_d7IY_CXjaXX-dzd12hE5loN6YORg7DWcCeYMlMMn5Uop5X3')
+    image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_d7IY_CXjaXX-dzd12hE5loN6YORg7DWcCeYMlMMn5Uop5X3'),
+    telephoneNumber:742589645,
+    url: url('http://www.madridsolyagua.com/')
   },
   {
     owner: 'Ignacio chamberi',
@@ -288,7 +348,9 @@ module.exports = {
     comments: 'We use medicine is an inclusive term for specialties that focus on improving cosmetic appearance through the treatment of conditions including scars, skin laxity, wrinkles, moles, liver spots, excess fat, cellulite, unwanted hair, skin discoloration...',
     email: 'chamberi@dermo.com',
     nature: 'wellness industry',
-    image:url('http://www.franquiciator.es/wp-content/uploads/2013/01/dorsia.jpg')
+    image:url('http://www.franquiciator.es/wp-content/uploads/2013/01/dorsia.jpg'),
+    telephoneNumber:754258964,
+    url: url('http://www.dorsia.es/')
   },
   {
     owner: 'Alejandro de la cruz',
@@ -297,7 +359,10 @@ module.exports = {
     comments: 'We use medicine is an inclusive term for specialties that focus on improving cosmetic appearance through the treatment of conditions including scars, skin laxity, wrinkles, moles, liver spots, excess fat, cellulite, unwanted hair, skin discoloration...',
     email: 'cruz@clinic.com',
     nature: 'wellness industry',
-    image:url('http://padres20.org/wp-content/uploads/2016/01/HRI.png')
+    image:url('http://padres20.org/wp-content/uploads/2016/01/HRI.png'),
+    telephoneNumber:784814864,
+    url: url('http://www.ruberinternacional.es/')
+
   },
   {
     owner: 'Claudio Brasero',
@@ -306,7 +371,9 @@ module.exports = {
     comments: ' four spaces local with bars, lights and dance floor with DJ, located in the old Barceló Theater.',
     email: 'brasero@barcelo.com',
     nature: 'entertainment',
-    image:url('http://media.tilllate.es/eventflyers/fcef3fd8ea2f0c0fb56ebc5dc2a2e128.jpeg')
+    image:url('http://media.tilllate.es/eventflyers/fcef3fd8ea2f0c0fb56ebc5dc2a2e128.jpeg'),
+    telephoneNumber:616464484,
+    url: url('https://teatrobarcelo.com/')
   },
   {
     owner: 'Pablo Merino',
@@ -315,7 +382,9 @@ module.exports = {
     comments: 'The Market of San Miguel is a covered market located in Madrid, Spain. Originally built in 1916, it was purchased by private investors in 2003 who renovated the iron structure and reopened it in 2009.',
     email: 'merino@sanmiguel.com',
     nature: 'hospitality',
-    image:url('http://1.bp.blogspot.com/-6OLl1Kk0FNM/UZS4GpmrAYI/AAAAAAAAIUk/OwpQd2QdmI8/s1600/ENTA.jpg')
+    image:url('http://1.bp.blogspot.com/-6OLl1Kk0FNM/UZS4GpmrAYI/AAAAAAAAIUk/OwpQd2QdmI8/s1600/ENTA.jpg'),
+    telephoneNumber:782223654,
+    url: url('http://www.mercadodesanmiguel.es/')
   },
   {
     owner: 'Aleix Revuelto',
@@ -324,7 +393,9 @@ module.exports = {
     comments: 'One of the most famous bars in Madrid, come with your friends!.',
     email: 'revuelto@cañas.com',
     nature: 'hospitality',
-    image:url('https://colombia.100montaditos.com/wp-content/themes/100montaditos/images/conocenos.jpg')
+    image:url('https://colombia.100montaditos.com/wp-content/themes/100montaditos/images/conocenos.jpg'),
+    telephoneNumber:647859026,
+    url: url('https://us.100montaditos.com/')
   },
   {
     owner: 'Alfredo Sofias',
@@ -333,7 +404,10 @@ module.exports = {
     comments: 'Founded in 1956 in Palma de Mallorca, Spain, Meliá Hotels International is one of the largest hotel companies in the world and the largest hotel chain in Spain in both resort and city hotels. The company currently operates more than 370 hotels in 43 countries',
     email: 'sofias@melia.com',
     nature: 'hospitality',
-    image:url('https://www.brandsofspain.com/wp-content/uploads/2011/07/WEB-MHI-centrado-750x430.jpg')
+    image:url('https://www.brandsofspain.com/wp-content/uploads/2011/07/WEB-MHI-centrado-750x430.jpg'),
+    telephoneNumber:799454652,
+    url: url('https://www.melia.com/es/home.htm')
+
   },
   {
     owner: 'Marta Soledad',
@@ -342,7 +416,10 @@ module.exports = {
     comments: 'NH Hotel Group is a Spanish-based hotel chain headquartered in Madrid. NH offers moderately priced and modernly-furnished hotel rooms and lobbies, located primarily in Europe and Latin America.',
     email: 'sole@nh.com',
     nature: 'hospitality',
-    image:url('https://pbs.twimg.com/profile_images/920325886536224768/Hj07B7XQ_400x400.jpg')
+    image:url('https://pbs.twimg.com/profile_images/920325886536224768/Hj07B7XQ_400x400.jpg'),
+    telephoneNumber:687459596,
+    url: url('https://www.nh-hoteles.es/')
+
   },
   {
     owner: 'Pedro Trolero',
@@ -351,7 +428,9 @@ module.exports = {
     comments: 'Law firms in the city, your problem concern us',
     email: 'trol@navasycusi.com',
     nature: 'SMEs',
-    image: url('https://s3-media2.fl.yelpcdn.com/bphoto/HnWtCq1U_OO6auu9C-3g7g/o.jpg')
+    image: url('https://s3-media2.fl.yelpcdn.com/bphoto/HnWtCq1U_OO6auu9C-3g7g/o.jpg'),
+    telephoneNumber:687459596,
+    url: url('https://www.nh-hoteles.es/')
   },
   {
     owner: 'Nessi Carles',
