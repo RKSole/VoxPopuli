@@ -1,26 +1,109 @@
+<div class="hola" *ngIf="bol">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 p-0">
 
-<div class="main" *ngIf="sessionService.user">
-  <div class="header">
-    <h3>Username: {{sessionService.user.username}}</h3>
-    <h5>Birthday: {{sessionService.user.birthdate}}</h5>
-  </div>
-  <div class="wrapper">
-    <p>Email:
-      <span>{{sessionService.user.email}} </span>
-    </p>
-    
-        <img src="{{sessionService.user.profilePic}}" height="100" width="100">
-    <p>Reviews Created:
-        <span>{{sessionService.user.reviewsCreated}}</span>
-    </p>
-    <a class="btn btn-warning" [routerLink]="['**']">Home </a>     
-    <a class="btn btn-warning" [routerLink]="[]">Update </a>
-  </div>
-</div>
-<div>
-    <div class="review" *ngFor="let r of review">
-      <p>  {{ r.comments }} </p>
-      <p>  {{ r.punctuation }} </p>
-      <hr>
+                <div class="card hovercard">
+                    <div class="cardheader">
+
+                    </div>
+                    <div class="avatar">
+                        <img src="{{user.profilePic}}">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <h2>{{sessionService.user.username}}</h2>
+                        </div>
+                        <hr>
+                        <div class="desc">
+                            <h4>
+                                <span class="glyphicon glyphicon-envelope"></span> {{sessionService.user.email}}</h4>
+                        </div>
+                        <hr>
+                        <div class="desc">
+                            <h4>
+                                <span class="glyphicon glyphicon-star-empty"></span> {{sessionService.user.reviewsCreated}}</h4>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="bottom">
+                        <a href="https://twitter.com/?lang=es">
+                            <img alt="twitter" src='https://sguru.org/wp-content/uploads/2018/02/twitter-icon-1.png' height="33" width="34">
+                        </a>
+                        <a href="https://plus.google.com">
+                            <img alt="plus" src='http://icons.iconarchive.com/icons/dtafalonso/android-l/512/Google-Plus-icon.png' height="37" width="38">
+                        </a>
+                        <a href="https://www.instagram.com/?hl=es">
+                            <img alt="insta" src='https://www.multiplicalia.com/wp-content/themes/multiplicaliaweb/img/instagram.png' height="34" width="35">
+                        </a>
+                        <a href="https://es-es.facebook.com/">
+                            <img alt="insta" src='https://www.digitalunite.com/sites/default/files/images/facebook_2_2.png' height="32" width="33">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
-  </div>
+</div>
+
+<div class="review" *ngFor="let r of review">
+    <div class="container">
+        <div class="rowUp">
+            <div class="panel panel-default widget">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span>
+                    <h3 class="panel-title">
+                        Recent Comments</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-2 col-md-1">
+                                    <a [routerLink]="['/companyDetail',r.firm._id]">
+                                        <img src="{{r.firm.image}}" class="img-circle img-responsive" height="100" width="100">
+                                    </a>
+                                </div>
+                                <div class="col-xs-10 col-md-11">
+                                    <div>
+                                           <h2>{{r.firm.companyName}}</h2>
+                                        <div class="mic-info">
+                                                <p><b> {{ r.comments }}</b> </p>
+                                        </div>
+                                    </div>
+                                    <div class="comment-text">
+                                            <p><b> <span class="glyphicon glyphicon-star-empty"></span> {{ r.punctuation }}</b></p>  
+                                    </div>
+                                    <div class="action">
+                                        <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div>
+    <div class="review" *ngFor="let r of review">
+        <p> {{ r.comments }} </p>
+        <a [routerLink]="['/companyDetail',r.firm._id]">
+        <img src="{{r.firm.image}}" height="100" width="100">
+        </a>
+        <p> <span class="glyphicon glyphicon-star-empty"></span> {{ r.punctuation }} </p>   
+        <hr>
+    </div>
+</div> -->

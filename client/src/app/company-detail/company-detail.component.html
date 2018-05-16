@@ -1,41 +1,93 @@
-<div *ngIf='company'>
-  <h3>
-  {{company.companyName}}
-</h3>
-<ul class="company-detail">
-      <li> <b>Email:</b> {{company.email}} </li>
-      <hr>
-      <li> <b>Phone:</b> {{company.telephoneNumber}} </li>
-      <hr>
-      <li> <b>Website:</b> {{company.url}} </li>
-      <hr>
-      <li> <b>Nature:</b> {{company.nature}} </li>
-      <hr>
-      <li> <b>Description:</b> {{company.comments}} </li>
-      <hr>
-      <li> <b>Rating:</b> {{company.rating}} </li>
-      <hr>
-      <img src="{{company.image}}" height="100" width="100">
-  </ul>
-</div>
+<div class="detail" *ngIf='company'>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 p-0">
 
-<div>
-    <div class="review" *ngFor="let r of review">
-      <a [routerLink]="['/profile',r.critic]">
-        <img src="{{sessionService.user.profilePic}}" width="40"/>
-      </a>
-      <h3> {{ sessionService.user.username }} </h3>
-      <p>  {{ r.comments }} </p>
-      <p>  {{ r.punctuation }} </p>
+        <div class="card hovercard">
+          <div class="cardheader">
+
+          </div>
+          <div class="avatar">
+            <img src="{{company.image}}" height="100" width="100">
+          </div>
+          <div class="info">
+            <div class="title">
+              <h1>
+                {{company.companyName}}
+              </h1>
+            </div>
+            <hr>
+            <div class="desc">
+              <h4>
+                <span class="glyphicon glyphicon-earphone"></span> {{company.telephoneNumber}}</h4>
+            </div>
+            <hr>
+            <div class="desc">
+              <h4>
+                  <span class="glyphicon glyphicon-envelope"></span> {{company.email}}</h4>
+            </div>
+            <hr>
+            <div class="desc">
+              <h4 style="color:rgb(28, 55, 211)">
+                <span class="glyphicon glyphicon-link"></span> {{company.url}}</h4>
+            </div>
+            <hr>
+            <div class="desc">
+              <h4>
+                <span class="glyphicon glyphicon-briefcase"></span>
+                {{company.nature}}</h4>
+            </div>
+            <hr>
+            <div class="desc">
+              <h5>{{company.comments}}</h5>
+            </div>
+            <hr>
+            <div class="desc">
+              <h4><span class="glyphicon glyphicon-star-empty"></span> {{company.rating}}</h4>
+            </div>
+            <hr>
+
+          </div>
+          <div class="bottom">
+            <a href="https://twitter.com/?lang=es">
+              <img alt="twitter" src='https://sguru.org/wp-content/uploads/2018/02/twitter-icon-1.png' height="32" width="33">
+            </a>
+            <a href="https://plus.google.com">
+              <img alt="plus" src='http://icons.iconarchive.com/icons/dtafalonso/android-l/512/Google-Plus-icon.png' height="37" width="38">
+            </a>
+            <a href="https://www.instagram.com/?hl=es">
+              <img alt="insta" src='https://www.multiplicalia.com/wp-content/themes/multiplicaliaweb/img/instagram.png' height="34" width="35">
+            </a>
+            <a href="https://es-es.facebook.com/">
+              <img alt="insta" src='https://www.digitalunite.com/sites/default/files/images/facebook_2_2.png' height="32" width="33">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-<form (ngSubmit)="newReview(myForm)" #myForm="ngForm">
+
+
+
+  
+  <form (ngSubmit)="newReview(myForm)" #myForm="ngForm">
     <!-- <img src="{{sessionService.user.profilePic}}" height="100" width="100"> -->
     <p> comments
-      <input type="text" name="comments" [(ngModel)]="comments" required  >
+      <input type="text" name="comments" [(ngModel)]="comments" required>
     </p>
     <p> punctuation
-      <input type="number" max="5" min="0" name="punctuation" [(ngModel)]="punctuation" required >
+      <input type="number" max="5" min="0" name="punctuation" [(ngModel)]="punctuation" required>
     </p>
     <button type="submit"> Create Review </button>{{error}}
   </form>
+
+  <div>
+    <div class="review" *ngFor="let r of review">
+      <a [routerLink]="['/profile',r.critic]">
+        <img src="{{sessionService.user.profilePic}}" width="40" />
+      </a>
+      <h3> {{ sessionService.user.username }} </h3>
+      <p> {{ r.comments }} </p>
+      <p><span class="glyphicon glyphicon-star-empty"></span> {{ r.punctuation }} </p>
+    </div>
+  </div>

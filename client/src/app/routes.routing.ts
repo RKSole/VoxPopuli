@@ -16,6 +16,5 @@ export const routes: Routes = [
   { path: 'company', component: AddCompanyComponent},
   { path: 'companyDetail/:id', component: CompanyDetailComponent},
   { path: 'companyList', component: ListCompaniesComponent},
-  { path: '**', redirectTo: '' }
 ];
 

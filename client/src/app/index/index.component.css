@@ -1,0 +1,132 @@
+/*
+Free App template for Bootstrap 3
+Code snippet by maridlcrmn for Bootsnipp.com
+Follow me on Twitter @maridlcrmn
+Image credits: unsplash.com
+Image placeholders: placemi.com
+*/
+
+
+.mt-100 {
+  margin-top: 100px; 
+}
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding: 7px 8px;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.header {
+  padding-top: 50px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.footer {
+  color: #887;
+  background-color: #eee;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.content {
+  position: relative;
+  display: table;
+  width: 100%;
+  min-height: 60vh;
+}
+.pull-middle {
+  display: table-cell;
+  vertical-align: middle;;
+}
+.btn {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.btn-circle {
+  border-radius: 20px;
+}
+
+.input-group input {
+  border: 0;
+  box-shadow: none;
+  padding-right: 30px;
+}
+.input-group input:focus,
+.input-group input:active {
+  outline: 0;
+  box-shadow: none;
+}
+.input-group-btn:last-child>.btn {
+  z-index: 2;
+  margin-left: -18px;   
+  border-radius: 20px;
+}
+
+.phone {
+  position: relative;
+  max-width: 263px;
+  margin-top: 90px;
+  margin-left: 40px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  background-color: #222;
+  box-shadow: 20px 20px 40px #887;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-top: 3px
+}
+
+.btn3d {
+  position:relative;
+  top: -6px;
+  border:0;
+   transition: all 40ms linear;
+   margin-top:10px;
+   margin-bottom:10px;
+   margin-left:2px;
+   margin-right:2px;
+}
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus {
+  -moz-outline-style:none;
+       outline:medium none;
+}
+.btn3d:active, .btn3d.active {
+  top:2px;
+}
+.btn3d.btn-success {
+  box-shadow:0 0 0 1px #31c300 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #5eb924, 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color:#78d739;
+} 
+.btn3d.btn-success:active, .btn3d.btn-success.active {
+  box-shadow:0 0 0 1px #30cd00 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+  background-color: #78d739;
+}
+
+.btn3d.btn-info {
+  box-shadow:0 0 0 1px #00a5c3 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #348FD2, 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color:#39B3D7;
+}
+.btn3d.btn-info:active, .btn3d.btn-info.active {
+  box-shadow:0 0 0 1px #00a5c3 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+  background-color: #39B3D7;
+}
+.btn3d.btn-default {
+  color: #666666;
+  box-shadow:0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255,255,255,0.10) inset, 0 8px 0 0 #BEBEBE, 0 8px 8px 1px rgba(0,0,0,.2);
+  background-color:#f9f9f9;
+}
+.btn3d.btn-default:active, .btn3d.btn-default.active {
+  color: #666666;
+  box-shadow:0 0 0 1px #ebebeb inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,.1);
+  background-color:#f9f9f9;
+}

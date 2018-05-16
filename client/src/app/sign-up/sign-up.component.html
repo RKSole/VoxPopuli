@@ -1,25 +1,54 @@
-<div class="main">
 
-  <form>
-    <h2> Signup </h2>
-    <input type="text" [(ngModel)]="username" name="username" placeholder="Username" />
-    <br>
-    <input type="password" [(ngModel)]="password" name="password" placeholder="Password" />
-    <br>
-    <input type="email" [(ngModel)]="email" name="email" placeholder="email" />
-    <br>
-    <label for="date">Birthdate</label>
-    <input id="date" type="date" name="birthdate" [(ngModel)]="birthdate">
-    <p> Picture <small>(url)</small>
-      <input id="myUrl" type="url" 
-           name="profilePic" [(ngModel)]="profilePic">
-           <label for="fileupload"></label>
-           </p>
-    <div>
-      <button (click)="signup()"> Subscribe me!
-      </button>
-    </div>
-  </form>
-</div>
+    <div class="container">
+        <div class="row centered-form">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Please sign up for Voxpopuli
+                  <small>It's free!</small>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <form role="form">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="text" [(ngModel)]="username" name="username" placeholder="Username" class="form-control input-sm" placeholder="Username"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="password" [(ngModel)]="password" name="password" placeholder="Password" class="form-control input-sm" placeholder="password"
+                        /> </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="email" [(ngModel)]="email" name="email" id="email" class="form-control input-sm" placeholder="email">
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="date" [(ngModel)]="birthdate" name="birthdate" id="birthdate" class="form-control input-sm" placeholder="date">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col xs-6 col-md-6">
+                      <div class="form-group">
+                        <input id="myUrl" type="url" name="profilePic" [(ngModel)]="profilePic" class="form-control input-sm" placeholder="Picture url">
+                      </div>
+                    </div>
+                  </div>
+                  <button (click)="signup()" class="btn btn-info btn-block">Subscribe me! </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="error"> {{ error }} </p>
 
-<p class="error"> {{ error }} </p>

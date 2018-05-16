@@ -46,18 +46,21 @@ router.post('/review', (req, res, next) => {
 /* GET a single Review. */
 router.get('/review/:id', checkIDParam, (req, res) => {
   Review.findById(req.params.id)
+    .populate("firm")
     .then(p => res.status(200).json(p))
     .catch(e => res.status(500).json({ error: e.message }));
 });
 
 router.get('/review/critic/:id', checkIDParam, (req, res) => {
   Review.find({ critic: req.params.id })
+  .populate("firm")
     .then(p => res.status(200).json(p))
     .catch(e => res.status(500).json({ error: e.message }));
 });
 
 router.get('/review/comments/:id', checkIDParam, (req, res) => {
   Review.find({ firm: req.params.id })
+  .populate("firm")
     .then(p => res.status(200).json(p))
     .catch(e => res.status(500).json({ error: e.message }));
 });

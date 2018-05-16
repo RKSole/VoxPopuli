@@ -96,5 +96,4 @@ app.use(function(req, res) {
   res.sendfile(__dirname + '/public/index.html');
 });
 
-
 module.exports = app;

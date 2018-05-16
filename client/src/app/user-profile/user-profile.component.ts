@@ -15,6 +15,7 @@ export class UserProfileComponent implements OnInit {
   firm: Array<any>;
   user: any;
   company: any;
+  bol: boolean = false;
 
   constructor(
     private sessionService: SessionService,
@@ -32,6 +33,7 @@ export class UserProfileComponent implements OnInit {
       this.reviewService.getReviewCritic(this.user._id).subscribe(review => {
         this.review = review;
         console.log(this.review);
+        this.bol = true;
       });
     });
 }
