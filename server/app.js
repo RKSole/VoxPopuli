@@ -15,23 +15,23 @@ const passport   = require('passport');
 const dbUrl = process.env.DBURL
 mongoose.Promise = Promise;
 
-// mongoose
-//   .connect(dbUrl, { useMongoClient: true })
-//   .then(() => {
-//     console.log("Connected to Mongo!");
-//   })
-//   .catch(err => {
-//     console.error("Error connecting to mongo", err);
-//   });
-
-  mongoose
-  .connect("mongodb://localhost:27017/server", { useMongoClient: true })
+mongoose
+  .connect(dbUrl, { useMongoClient: true })
   .then(() => {
     console.log("Connected to Mongo!");
   })
   .catch(err => {
     console.error("Error connecting to mongo", err);
   });
+
+  // mongoose
+  // .connect("mongodb://localhost:27017/server", { useMongoClient: true })
+  // .then(() => {
+  //   console.log("Connected to Mongo!");
+  // })
+  // .catch(err => {
+  //   console.error("Error connecting to mongo", err);
+  // });
 
 const app_name = require("./package.json").name;
 const debug = require("debug")(
