@@ -105,7 +105,7 @@
               <li class="list-group-item">
                 <div class="row">
                   <div class="col-xs-2 col-md-1">
-                    <a [routerLink]="['/profile',r.critic]">
+                    <a [routerLink]="['/profile',r.critic._id]">
                       <img src="{{r.critic.profilePic}}" width="70" />
                     </a>
                   </div>
@@ -131,7 +131,7 @@
                       <button type="button" class="btn btn-success btn-xs" title="Approved">
                         <span class="glyphicon glyphicon-ok"></span>
                       </button>
-                      <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                      <button type="button" class="btn btn-danger btn-xs" (click)="delete()" title="Delete">
                         <span class="glyphicon glyphicon-trash"></span>
                       </button>
                     </div>

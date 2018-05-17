@@ -39,7 +39,7 @@ const simpleCrud = Model => {
   // Remove DETAIL
   router.delete("/:id", (req, res, next) => {
     Model.findByIdAndRemove(req.params.id)
-      .then(() => res.json({ message: `SUCESSFUL DELETE ${req.params.id}` }))
+      .then(() => res.json({ message: `SUCCESSFUL DELETE ${req.params.id}` }))
       .catch(e => next(e));
   });
 

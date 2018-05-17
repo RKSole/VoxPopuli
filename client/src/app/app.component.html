@@ -39,8 +39,7 @@
             <a [routerLink]="['profile']">MyProfile</a>
           </li>
           <li>
-            <a [routerLink]="['']">
-              <span class="glyphicon glyphicon-off"></span>
+            <a (click)="sessionService.logout().subscribe()" [routerLink]="['']"><span class="glyphicon glyphicon-off"></span>
             </a>
           </li>
         </ul>
@@ -48,7 +47,6 @@
     </div>
   </nav>
 </body>
-
 </html>
 
 <router-outlet></router-outlet>

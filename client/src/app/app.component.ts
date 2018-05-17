@@ -8,4 +8,9 @@ import { SessionService } from './services/session.service';
 })
 export class AppComponent {
   title = 'VOXPOPULI!';
+  constructor(public sessionService: SessionService) {
+    this.sessionService.userEvent.subscribe( user => {
+      console.log("USER EVENT");
+    });
+  }
 }

@@ -12,10 +12,10 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const cors = require('cors');
 const passport   = require('passport');
-
+const dbUrl = process.env.DBURL
 mongoose.Promise = Promise;
 mongoose
-  .connect("mongodb://localhost/server", { useMongoClient: true })
+  .connect(dbUrl, { useMongoClient: true })
   .then(() => {
     console.log("Connected to Mongo!");
   })

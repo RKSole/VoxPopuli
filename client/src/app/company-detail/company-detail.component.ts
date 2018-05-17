@@ -17,7 +17,7 @@ export class CompanyDetailComponent implements OnInit {
   review: any;
   comments: any;
   punctuation: any;
-  error:any;
+  error: any;
 
   constructor(
     private ReviewService: ReviewService,
@@ -36,11 +36,6 @@ export class CompanyDetailComponent implements OnInit {
         });
       });
     });
-    // route.params.subscribe(params =>{
-    //   ReviewService.get(params.id).subscribe(review => {
-    //     this.review = review;
-    //   })
-    // })
   }
 
   ngOnInit() {
@@ -69,14 +64,6 @@ export class CompanyDetailComponent implements OnInit {
       this.review.push(review);
       this.comments = '';
       this.punctuation = '';
-       })
-
-
-
-    //   refreshReview() {
-    //     this.ReviewService
-    //       .get(this.review._id)
-    //       .subscribe(review => (this.review = review));
-    // }
+       });
   }
 }

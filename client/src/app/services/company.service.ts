@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs';
 import { environment } from '../../environments/environment';
+const BASEURL: string = environment.BASEURL;
 
 @Injectable()
 export class CompanyService {
