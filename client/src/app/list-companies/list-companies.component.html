@@ -1,4 +1,21 @@
-<div class="company" *ngFor="let c of company">
+<div class="container">
+	<div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    <input [(ngModel)]="companyName" class="form-control"  placeholder="Company" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<div class="company" *ngFor="let c of company | filter : 'companyName':companyName">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-3 col-md-3">

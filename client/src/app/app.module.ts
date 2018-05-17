@@ -16,6 +16,7 @@ import { routes } from './routes.routing';
 import { ReviewService } from './services/review.service';
 import { CompanyService } from './services/company.service';
 import { ListCompaniesComponent } from './list-companies/list-companies.component';
+import { FilterPipe} from './filter.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ListCompaniesComponent } from './list-companies/list-companies.componen
     UserProfileComponent,
     IndexComponent,
     CompanyDetailComponent,
-    ListCompaniesComponent
+    ListCompaniesComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

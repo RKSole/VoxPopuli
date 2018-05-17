@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { CompanyService } from '../services/company.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CompanyDetailComponent } from '../company-detail/company-detail.component';
+import { FilterPipe} from '../filter.pipe';
 
 @Component({
   selector: 'app-list-companies',
@@ -22,9 +23,5 @@ export class ListCompaniesComponent implements OnInit {
   ngOnInit() {
   }
 
-}
-
-
-
- 
+};
 
