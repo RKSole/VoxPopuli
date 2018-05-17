@@ -46,9 +46,14 @@ export class CompanyDetailComponent implements OnInit {
   }
 
   refreshCompany() {
+    console.log("Entra Refresh")
     this.CompanyService
       .get(this.company._id)
       .subscribe(company => (this.company = company));
+      this.ReviewService.getReviewCompanies(this.company._id).subscribe(review => {
+        this.review = review;
+        console.log(this.review);
+      });
   }
 
   newReview(myForm) {
@@ -64,6 +69,14 @@ export class CompanyDetailComponent implements OnInit {
       this.review.push(review);
       this.comments = '';
       this.punctuation = '';
+      this.refreshCompany();
        });
+
+  }
+  delete(id){
+    this.ReviewService.remove(id).subscribe(()=>{
+      this.refreshCompany();
+    });
+    
   }
 }

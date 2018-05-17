@@ -14,8 +14,18 @@ const cors = require('cors');
 const passport   = require('passport');
 const dbUrl = process.env.DBURL
 mongoose.Promise = Promise;
-mongoose
-  .connect(dbUrl, { useMongoClient: true })
+
+// mongoose
+//   .connect(dbUrl, { useMongoClient: true })
+//   .then(() => {
+//     console.log("Connected to Mongo!");
+//   })
+//   .catch(err => {
+//     console.error("Error connecting to mongo", err);
+//   });
+
+  mongoose
+  .connect("mongodb://localhost:27017/server", { useMongoClient: true })
   .then(() => {
     console.log("Connected to Mongo!");
   })
