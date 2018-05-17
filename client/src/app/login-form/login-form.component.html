@@ -1,17 +1,31 @@
-<div class="main">
-
-    <form>
-      <h2> Login </h2>
-      <input type="text" [(ngModel)]="username" name="username" placeholder="Username" />
-      <br>
-      <input type="password" [(ngModel)]="password" name="password" placeholder="Password" />
-      <br>
-      <div>
-        <button (click)="login()"> Enter
-        </button>
+<div class="container">
+  <div class="row centered-form">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Login
+          </h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text" [(ngModel)]="username" name="username" placeholder="Username" class="form-control input-sm" placeholder="Username"
+                  />
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" [(ngModel)]="password" name="password" placeholder="Password" class="form-control input-sm" placeholder="password"
+                  /> </div>
+              </div>
+            </div>
+            <button (click)="login()" class="btn btn-info btn-block"> Access </button>
+          </form>
+        </div>
       </div>
-    </form>
+    </div>
   </div>
-  
-  <p class="error"> {{ error }} </p>
-  
+</div>
+<p class="error"> {{ error }} </p>

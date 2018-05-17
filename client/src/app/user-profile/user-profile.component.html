@@ -68,13 +68,18 @@
                                 </div>
                                 <div class="col-xs-10 col-md-11">
                                     <div>
-                                           <h2>{{r.firm.companyName}}</h2>
+                                        <h2>{{r.firm.companyName}}</h2>
                                         <div class="mic-info">
-                                                <p><b> {{ r.comments }}</b> </p>
+                                            <p>
+                                                <b> {{ r.comments }}</b>
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="comment-text">
-                                            <p><b> <span class="glyphicon glyphicon-star-empty"></span> {{ r.punctuation }}</b></p>  
+                                        <p>
+                                            <b>
+                                                <span class="glyphicon glyphicon-star-empty"></span> {{ r.punctuation }}</b>
+                                        </p>
                                     </div>
                                     <div class="action">
                                         <button type="button" class="btn btn-primary btn-xs" title="Edit">
@@ -96,14 +101,3 @@
         </div>
     </div>
 </div>
-
-<!-- <div>
-    <div class="review" *ngFor="let r of review">
-        <p> {{ r.comments }} </p>
-        <a [routerLink]="['/companyDetail',r.firm._id]">
-        <img src="{{r.firm.image}}" height="100" width="100">
-        </a>
-        <p> <span class="glyphicon glyphicon-star-empty"></span> {{ r.punctuation }} </p>   
-        <hr>
-    </div>
-</div> -->

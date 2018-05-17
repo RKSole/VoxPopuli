@@ -1,29 +1,71 @@
-<form (ngSubmit)="addCompany(myForm, select.value)" #myForm="ngForm">
-  <p> Name
-    <input type="text" name="companyName" [(ngModel)]="companyName" required />
-  </p>
-  <p> Email
-    <input type="email" name="email" [(ngModel)]="email" required />
-  </p>
-  <p> Phone
-    <input type="text" name="telephoneNumber" [(ngModel)]="telephoneNumber" required />
-  </p>
-  <select #select>
-    <option *ngFor="let n of nature" [value]="n" required>
-      {{n}}
-    </option>
-  </select>
-  <p> Website
-    <input type="text" name="url" [(ngModel)]="url" required />
-  </p>
-  <p> Description
-    <input type="text" name="comments" [(ngModel)]="comments" required />
-  </p>
-  <p> Logo <small>(url)</small>
-  <input id="myUrl" type="url" 
-       name="image" [(ngModel)]="image" required capture>
-       <label for="fileupload"></label>
-       </p>
-       <hr>
-  <button type="submit"> Create Company </button>
-</form>
+<div class="container">
+  <div class="row centered-form">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please add your company's info
+          </h3>
+        </div>
+        <div class="panel-body">
+          <form (ngSubmit)="addCompany(myForm, select.value)" #myForm="ngForm">
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="text" [(ngModel)]="companyName" name="companyName" placeholder="companyName" class="form-control input-sm" placeholder="CompanyName"
+                  />
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="email" [(ngModel)]="email" name="email" placeholder="email" class="form-control input-sm" placeholder="Email"
+                  /> </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="text" [(ngModel)]="telephoneNumber" name="email" id="email" class="form-control input-sm" placeholder="Phone">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <select #select class="form-control">
+                    <option selected>Nature</option>
+                    <option *ngFor="let n of nature" [value]="n" required>
+                      {{n}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="text" [(ngModel)]="url" name="url" id="url" class="form-control input-sm" placeholder="Website">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="myUrl" [(ngModel)]="image" name="image" id="image" class="form-control input-sm" placeholder="url">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col xs-6 col-md-6">
+                <div class="form-group">
+                  <div class="form-group">
+                    <textarea id="comments" name="comments" class="form-control" [(ngModel)]="comments" placeholder="Description" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-info btn-block"> Create Company </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="error"> {{ error }} </p>

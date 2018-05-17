@@ -1,37 +1,37 @@
 <div class="company" *ngFor="let c of company">
   <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-3 col-md-3">
-          <a [routerLink]="['/companyDetail',c._id]">
-            <img [src]="c.image" class="img-responsive img-box img-thumbnail" height="150" width="150">
-          </a>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-9">
-          <div class="list-group">
-            <div class="list-group-item">
-              <div class="row-picture">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 col-md-3">
+        <a [routerLink]="['/companyDetail',c._id]">
+          <img [src]="c.image" class="img-responsive img-box img-thumbnail" height="150" width="150">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-md-9">
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-picture">
+            </div>
+            <div class="row-content">
+              <div class="list-group-item-heading">
+                <h3 style="color:rgb(7, 112, 63)"> {{ c.companyName }} </h3>
               </div>
-              <div class="row-content">
-                <div class="list-group-item-heading">
-                  <h3 style="color:rgb(7, 112, 63)"> {{ c.companyName }} </h3>
-                </div>
-                <small style="color:rgb(95, 10, 45)">
-                  <i class="glyphicon glyphicon-user"></i> {{c.email}}
-                  <br>
-                  <span class="explore">
-                    <i class="glyphicon glyphicon-star-empty"></i>
-                    <small>{{c.rating}} </small>
-                  </span>
-                </small>
-              </div>
+              <small style="color:rgb(95, 10, 45)">
+                <i class="glyphicon glyphicon-user"></i> {{c.email}}
+                <br>
+                <span class="explore">
+                  <i class="glyphicon glyphicon-star-empty"></i>
+                  <small>{{c.rating}} </small>
+                </span>
+              </small>
             </div>
           </div>
-          <div class="ja">
-            <h4 style="color:rgb(28, 55, 211)">{{c.url}}</h4>
-            <p>{{c.comments}}</p>
-          </div>
+        </div>
+        <div class="ja">
+          <h4 style="color:rgb(28, 55, 211)">{{c.url}}</h4>
+          <p>{{c.comments}}</p>
         </div>
       </div>
-      <hr>
     </div>
+    <hr>
+  </div>
 </div>

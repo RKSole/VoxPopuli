@@ -246,8 +246,21 @@ ul {
   margin-bottom: 17px;
 }
 
-.btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
+/* .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  } */
 
 .detail{
   padding-top:70px;
 }
+.container{
+  padding-bottom: 30px;
+}
+
+#one{
+  background-color: rgb(197, 203, 204);
+  border-bottom-width: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+

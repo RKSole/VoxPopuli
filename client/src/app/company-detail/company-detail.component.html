@@ -24,7 +24,7 @@
             <hr>
             <div class="desc">
               <h4>
-                  <span class="glyphicon glyphicon-envelope"></span> {{company.email}}</h4>
+                <span class="glyphicon glyphicon-envelope"></span> {{company.email}}</h4>
             </div>
             <hr>
             <div class="desc">
@@ -43,7 +43,8 @@
             </div>
             <hr>
             <div class="desc">
-              <h4><span class="glyphicon glyphicon-star-empty"></span> {{company.rating}}</h4>
+              <h4>
+                <span class="glyphicon glyphicon-star-empty"></span> {{company.rating}}</h4>
             </div>
             <hr>
 
@@ -59,7 +60,7 @@
               <img alt="insta" src='https://www.multiplicalia.com/wp-content/themes/multiplicaliaweb/img/instagram.png' height="34" width="35">
             </a>
             <a href="https://es-es.facebook.com/">
-              <img alt="insta" src='https://www.digitalunite.com/sites/default/files/images/facebook_2_2.png' height="32" width="33">
+              <img alt="face" src='https://www.digitalunite.com/sites/default/files/images/facebook_2_2.png' height="32" width="33">
             </a>
           </div>
         </div>
@@ -67,27 +68,79 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="row" id="one">
+      <div class="styler">
+        <form (ngSubmit)="newReview(myForm)" #myForm="ngForm" class="col-md-12 go-right">
+          <h2>Add new comments</h2>
+          <div class="form-group">
+            <textarea id="comments" name="comments" class="form-control" [(ngModel)]="comments" placeholder="Comments" required></textarea>
+          </div>
+          <div class="form-group">
+            <input id="punctuation" name="punctuation" type="number" class="form-control" placeholder="Punctuation" [(ngModel)]="punctuation"
+              required>
+          </div>
+          <div>
+            <button type="submit" class="btn3d btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-ok"></span>
+            </button>{{error}}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
 
-  
-  <form (ngSubmit)="newReview(myForm)" #myForm="ngForm">
-    <!-- <img src="{{sessionService.user.profilePic}}" height="100" width="100"> -->
-    <p> comments
-      <input type="text" name="comments" [(ngModel)]="comments" required>
-    </p>
-    <p> punctuation
-      <input type="number" max="5" min="0" name="punctuation" [(ngModel)]="punctuation" required>
-    </p>
-    <button type="submit"> Create Review </button>{{error}}
-  </form>
-
-  <div>
-    <div class="review" *ngFor="let r of review">
-      <a [routerLink]="['/profile',r.critic]">
-        <img src="{{sessionService.user.profilePic}}" width="40" />
-      </a>
-      <h3> {{ sessionService.user.username }} </h3>
-      <p> {{ r.comments }} </p>
-      <p><span class="glyphicon glyphicon-star-empty"></span> {{ r.punctuation }} </p>
+  <div class="review" *ngFor="let r of review">
+    <div class="container">
+      <div class="rowUp">
+        <div class="panel panel-default widget">
+          <div class="panel-heading">
+            <span class="glyphicon glyphicon-comment"></span>
+            <h3 class="panel-title">
+              Recent Comments</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col-xs-2 col-md-1">
+                    <a [routerLink]="['/profile',r.critic]">
+                      <img src="{{sessionService.user.profilePic}}" width="70" />
+                    </a>
+                  </div>
+                  <div class="col-xs-10 col-md-11">
+                    <div>
+                      <h2> {{ sessionService.user.username }} </h2>
+                      <div class="mic-info">
+                        <p>
+                          <b> {{ r.comments }}</b>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="comment-text">
+                      <p>
+                        <b>
+                          <span class="glyphicon glyphicon-star-empty"></span> {{ r.punctuation }}</b>
+                      </p>
+                    </div>
+                    <div class="action">
+                      <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                      </button>
+                      <button type="button" class="btn btn-success btn-xs" title="Approved">
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </button>
+                      <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                        <span class="glyphicon glyphicon-trash"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
