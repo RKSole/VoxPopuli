@@ -106,12 +106,12 @@
                 <div class="row">
                   <div class="col-xs-2 col-md-1">
                     <a [routerLink]="['/profile',r.critic]">
-                      <img src="{{sessionService.user.profilePic}}" width="70" />
+                      <img src="{{r.critic.profilePic}}" width="70" />
                     </a>
                   </div>
                   <div class="col-xs-10 col-md-11">
                     <div>
-                      <h2> {{ sessionService.user.username }} </h2>
+                      <h2> {{ r.critic.username }} </h2>
                       <div class="mic-info">
                         <p>
                           <b> {{ r.comments }}</b>
