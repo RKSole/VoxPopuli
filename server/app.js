@@ -15,23 +15,23 @@ const passport   = require('passport');
 const dbUrl = process.env.DBURL
 mongoose.Promise = Promise;
 
-mongoose
-  .connect(dbUrl, { useMongoClient: true })
+// mongoose
+//   .connect(dbUrl, { useMongoClient: true })
+//   .then(() => {
+//     console.log("Connected to Mongo!");
+//   })
+//   .catch(err => {
+//     console.error("Error connecting to mongo", err);
+//   });
+
+  mongoose
+  .connect("mongodb://localhost:27017/server", { useMongoClient: true })
   .then(() => {
     console.log("Connected to Mongo!");
   })
   .catch(err => {
     console.error("Error connecting to mongo", err);
   });
-
-  // mongoose
-  // .connect("mongodb://localhost:27017/server", { useMongoClient: true })
-  // .then(() => {
-  //   console.log("Connected to Mongo!");
-  // })
-  // .catch(err => {
-  //   console.error("Error connecting to mongo", err);
-  // });
 
 const app_name = require("./package.json").name;
 const debug = require("debug")(
@@ -84,7 +84,7 @@ app.use(
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
-app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
+// app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
 app.locals.title = "VoxPopuli - Spit it Out";
